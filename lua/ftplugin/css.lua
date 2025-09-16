@@ -1,0 +1,15 @@
+return {
+  {
+    "stevearc/conform.nvim",
+    opts = function(_, opts)
+      opts.formatters_by_ft.css = { "prettier" }
+      opts.formatters_by_ft.scss = { "prettier" }
+    end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      table.insert(opts.ensure_installed, "css")
+    end,
+  },
+}
