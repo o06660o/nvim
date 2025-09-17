@@ -23,5 +23,5 @@ require("lazy").setup({
     { import = "plugin" },
     { import = "ftplugin" },
   },
-  checker = { enabled = true },
+  checker = { enabled = false },
 })
