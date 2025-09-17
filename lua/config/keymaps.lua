@@ -1,5 +1,3 @@
-vim.keymap.set("n", "<C-a>", "ggVG")
-
 vim.keymap.set("n", "<C-s>", ":w<CR>")
 
 -- Let konsole use the keymap `<C-LeftMouse>`.
