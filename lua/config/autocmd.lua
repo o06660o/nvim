@@ -6,13 +6,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = { "*.inc" },
-  callback = function()
-    vim.opt_local.filetype = "cpp"
-  end,
-})
-
 vim.api.nvim_create_autocmd("TermOpen", {
   pattern = "*",
   callback = function()
@@ -23,5 +16,18 @@ vim.api.nvim_create_autocmd({ "TermOpen", "WinEnter" }, {
   pattern = "term://*",
   callback = function()
     vim.cmd("startinsert")
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { "*.inc" },
+  callback = function()
+    vim.opt_local.filetype = "cpp"
+  end,
+})
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { "*.ll" },
+  callback = function()
+    vim.opt_local.filetype = "llvm"
   end,
 })
