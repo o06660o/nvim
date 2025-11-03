@@ -12,6 +12,9 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
       table.insert(opts.ensure_installed, "ocaml")
+      table.insert(opts.ensure_installed, "ocaml_interface")
+      table.insert(opts.ensure_installed, "ocamllex")
+      table.insert(opts.ensure_installed, "menhir")
     end,
   },
 }
