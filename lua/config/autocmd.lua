@@ -31,3 +31,15 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
     vim.opt_local.filetype = "llvm"
   end,
 })
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { "*.mll" },
+  callback = function()
+    vim.opt_local.filetype = "ocamllex"
+  end,
+})
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { "*.mly" },
+  callback = function()
+    vim.opt_local.filetype = "menhir"
+  end,
+})
