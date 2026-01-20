@@ -1,6 +1,15 @@
 return {
   {
     vim.lsp.enable("rust_analyzer"),
+    vim.lsp.config("rust_analyzer", {
+      settings = {
+        ["rust-analyzer"] = {
+          cargo = {
+            targetDir = "/home/o06660o/.cache/rust-analyzer",
+          },
+        },
+      },
+    }),
   },
   {
     "stevearc/conform.nvim",
