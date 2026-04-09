@@ -7,7 +7,6 @@ vim.opt.number = true
 
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
--- vim.g.clipboard = "osc52"
 
 vim.opt.undofile = true
 vim.opt.undolevels = 10000
@@ -21,3 +20,5 @@ vim.opt.autochdir = true
 vim.opt.secure = true
 
 vim.opt.belloff = "all"
+
+vim.opt.list = true

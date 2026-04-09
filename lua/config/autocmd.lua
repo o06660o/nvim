@@ -20,12 +20,6 @@ vim.api.nvim_create_autocmd({ "TermOpen", "WinEnter" }, {
 })
 
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = { "*.h" },
-  callback = function()
-    vim.opt_local.filetype = "c"
-  end,
-})
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   pattern = { "*.inc" },
   callback = function()
     vim.opt_local.filetype = "cpp"
