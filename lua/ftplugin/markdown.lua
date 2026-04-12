@@ -2,7 +2,19 @@ return {
   {
     "stevearc/conform.nvim",
     opts = function(_, opts)
-      opts.formatters_by_ft.markdown = { "markdownlint-cli2" }
+      opts.formatters_by_ft.markdown = { "markdownlint" }
+      opts.formatters = {
+        markdownlint = {
+          command = "markdownlint",
+          args = {
+            "--config",
+            vim.fn.expand("~/.markdownlint.json"),
+            "--fix",
+            "$FILENAME",
+          },
+          stdin = false,
+        },
+      }
     end,
   },
   {
